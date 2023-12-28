@@ -1,0 +1,27 @@
+{
+    "name": "HelpDesk Parser AddUsers",
+    "description": "Плагин разработан специально для r.3it.ru.\nРазработчик: Михаил Калинин",
+    "author": "Михаил Калинин",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": { 
+        "16":"icons/16.png",
+        "32":"icons/32.png",
+        "48":"icons/96.png",
+        "128":"icons/120.png"
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://r.3it.ru/*"],
+            "run_at": "document_idle",
+            "all_frames": false,
+            "js": ["content-scripts.js"]
+        }
+    ],
+    "host_permissions": ["https://r.3it.ru/*"],
+    "action": {
+        "default_popup":"popup.html"
+    },
+    "permissions": ["scripting", "activeTab"],
+    "background":{}
+}
